@@ -1,0 +1,90 @@
+
+
+
+palavra = str(input("Palavra: "))
+dica = str(input("Dica: "))
+t = (len(palavra))
+letra_certa = letra_errada = tentativa = 0
+
+while letra_certa < t:
+    print(f"\nPalavra com {t} letras. \nDica: {dica}")
+    if tentativa == 0:
+        for i in range(0, t):
+            print('___ ', end = '')
+
+    letra = str(input("\nEscolha uma letra: "))
+    tentativa += 1
+
+    pos = 0
+    for a in range(0, t):
+        if letra in palavra[pos]:
+            print(f' {letra} ', end = '')
+        else:
+            print(f' ___ ', end = '')
+        palavra.find(letra)
+        letra_certa += 1
+        pos += 1
+
+
+# from tkinter import *
+# import os
+#
+# app = Tk()
+# app.geometry('540x500')
+#
+# def visual():
+#     chute = []
+#     letraA = 1
+#
+#
+#     def clica(letra):
+#         global letraA
+#         if letra == 'A':
+#             letraA = 2
+#         chute.append(letra)
+#         print(chute)
+#         print('Letra A ', letraA)
+#
+#
+#     caminho = os.path.dirname(__file__)
+#     imgForca = PhotoImage(file = caminho + "\\forca.gif")
+#     labelForca = Label(app, image=imgForca)
+#     labelForca.place(x = 10, y = 10)
+#
+#     if letraA == 1:
+#         Button(app, text = "A", font = ("Comic Sans", 15), command = lambda: clica('A'), state = DISABLED). \
+#             place(x = 10, y = 410, height = 40, width = 40)
+#     if letraA == 2:
+#         Button(app, text = "cc", font = ("Comic Sans", 15)).\
+#             place(x = 10, y = 410, height = 40, width = 40)
+#
+#     Button(app, text = "B", font = ("Comic Sans", 15)).place(x = 50, y = 410, height = 40, width = 40)
+#     Button(app, text = "C", font = ("Comic Sans", 15)).place(x = 90, y = 410, height = 40, width = 40)
+#     Button(app, text = "D", font = ("Comic Sans", 15)).place(x = 130, y = 410, height = 40, width = 40)
+#     Button(app, text = "E", font = ("Comic Sans", 15)).place(x = 170, y = 410, height = 40, width = 40)
+#     Button(app, text = "F", font = ("Comic Sans", 15)).place(x = 210, y = 410, height = 40, width = 40)
+#     Button(app, text = "G", font = ("Comic Sans", 15)).place(x = 250, y = 410, height = 40, width = 40)
+#     Button(app, text = "H", font = ("Comic Sans", 15)).place(x = 290, y = 410, height = 40, width = 40)
+#     Button(app, text = "I", font = ("Comic Sans", 15)).place(x = 330, y = 410, height = 40, width = 40)
+#     Button(app, text = "J", font = ("Comic Sans", 15)).place(x = 370, y = 410, height = 40, width = 40)
+#     Button(app, text = "L", font = ("Comic Sans", 15)).place(x = 410, y = 410, height = 40, width = 40)
+#     Button(app, text = "K", font = ("Comic Sans", 15)).place(x = 450, y = 410, height = 40, width = 40)
+#     Button(app, text = "M", font = ("Comic Sans", 15)).place(x = 490, y = 410, height = 40, width = 40)
+#
+#     Button(app, text = "N", font = ("Comic Sans", 15)).place(x = 10, y = 450, height = 40, width = 40)
+#     Button(app, text = "O", font = ("Comic Sans", 15)).place(x = 50, y = 450, height = 40, width = 40)
+#     Button(app, text = "P", font = ("Comic Sans", 15)).place(x = 90, y = 450, height = 40, width = 40)
+#     Button(app, text = "Q", font = ("Comic Sans", 15)).place(x = 130, y = 450, height = 40, width = 40)
+#     Button(app, text = "R", font = ("Comic Sans", 15)).place(x = 170, y = 450, height = 40, width = 40)
+#     Button(app, text = "S", font = ("Comic Sans", 15)).place(x = 210, y = 450, height = 40, width = 40)
+#     Button(app, text = "T", font = ("Comic Sans", 15)).place(x = 250, y = 450, height = 40, width = 40)
+#     Button(app, text = "U", font = ("Comic Sans", 15)).place(x = 290, y = 450, height = 40, width = 40)
+#     Button(app, text = "V", font = ("Comic Sans", 15)).place(x = 330, y = 450, height = 40, width = 40)
+#     Button(app, text = "W", font = ("Comic Sans", 15)).place(x = 370, y = 450, height = 40, width = 40)
+#     Button(app, text = "X", font = ("Comic Sans", 15)).place(x = 450, y = 450, height = 40, width = 40)
+#     Button(app, text = "Y", font = ("Comic Sans", 15)).place(x = 410, y = 450, height = 40, width = 40)
+#     Button(app, text = "Z", font = ("Comic Sans", 15)).place(x = 490, y = 450, height = 40, width = 40)
+#
+# app.mainloop()
+
+
